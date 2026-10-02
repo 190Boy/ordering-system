@@ -35,3 +35,5 @@
 .drink-photo-large {width:100%;height:220px;flex:auto}
 @media(max-width:850px){.drink-photo{width:74px;height:94px;flex-basis:74px}}
 @media(max-width:480px){.drink-photo{width:90px;height:106px;flex-basis:90px}.drink-photo-large{width:100%;height:200px;flex:auto}}
+
+.deadline-actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:22px}.deadline-error{margin-top:16px}.deadline-dialog .muted{overflow-wrap:anywhere}
