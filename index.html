@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>一起點餐</title>
-<link rel="stylesheet" href="style.css"></head><body>
+<link rel="stylesheet" href="style.css?v=role-cards-20261002"></head><body>
 <header><div class="brand">一起點餐<small>選好喜歡的，一起送出。</small></div><span id="status" class="badge">載入中</span></header>
 <main class="container"><div id="error" class="error hidden" role="alert"></div><div id="notice" class="notice hidden" role="status"></div>
 <div id="loading" class="panel">正在讀取菜單，請稍候…</div>
 <section id="home" class="panel success hidden">
 <div class="eyebrow">LET'S ORDER TOGETHER</div><h1>今天，一起點什麼？</h1><p class="muted">主揪先開團，大家再從點餐連結選餐點。</p>
-<div style="padding:18px 0;border-top:1px solid var(--line)"><h2>我是主揪</h2><p class="muted">登入後選店家、開團，取得可以分享的點餐連結。</p><button id="openAdmin" class="primary wide">進入主揪管理</button></div>
-<div style="padding:18px 0 0;border-top:1px solid var(--line)"><h2>我要點餐</h2><p class="muted">請開啟主揪傳給你的點餐連結，就能選餐點、甜度、冰塊與加料。</p><p class="help">還沒收到連結？請向主揪索取當次團購的點餐連結。</p></div>
+<div class="role-options">
+<section class="role-card role-card-organizer" aria-labelledby="organizerTitle"><h2 id="organizerTitle">我是主揪</h2><p class="muted">登入後選店家、開團，取得可以分享的點餐連結。</p><button id="openAdmin" class="primary wide">進入主揪管理</button></section>
+<section class="role-card role-card-member" aria-labelledby="memberTitle"><h2 id="memberTitle">我要點餐</h2><p class="muted">請開啟主揪傳給你的點餐連結，就能選餐點、甜度、冰塊與加料。</p><p class="help">還沒收到連結？請向主揪索取當次團購的點餐連結。</p></section>
+</div>
 </section>
 <button id="errorHome" class="secondary hidden" style="margin-bottom:18px">回首頁</button>
 <section id="orderView" class="hidden"><div class="eyebrow">TODAY'S MENU</div><h1 id="storeTitle"></h1><p id="roundInfo" class="muted"></p><div class="layout"><section><input id="search" class="search" placeholder="搜尋餐點名稱" aria-label="搜尋餐點"><div id="tabs" class="tabs"></div><div id="menu" class="grid"></div></section><aside class="panel cart-panel"><h2>你的訂單</h2><label class="field"><span>姓名</span><input id="name" maxlength="40" autocomplete="name" placeholder="請填姓名，如：王小明"></label><div id="cart"></div><div class="total"><span id="cups">共 0 份</span><strong id="total">$0</strong></div><button id="submit" class="primary wide">送出訂單</button><p class="help">同名者請加上部門或姓氏，方便主揪統計。</p><p id="pendingNote" class="help hidden">前次送單尚未確認，請按「重試送出」查回結果；目前不能修改訂單。</p></aside></div></section>
@@ -18,3 +20,4 @@
 </main>
 <dialog id="drinkDialog" aria-labelledby="drinkName"><div class="modal-head"><div><span class="eyebrow" id="drinkCategory"></span><h2 id="drinkName"></h2></div><button class="close" id="closeDialog" aria-label="關閉">×</button></div><form id="drinkForm" class="modal-body"><p id="drinkRule" class="help"></p><div class="row"><label class="field"><span>尺寸</span><select id="size"></select></label><label class="field"><span>數量</span><input id="quantity" type="number" min="1" max="50" step="1" value="1" required></label></div><div class="row"><label class="field"><span>甜度</span><select id="sugar"></select></label><label class="field"><span>冰塊</span><select id="ice"></select></label></div><span class="choice-label">加料（可複選）</span><div id="toppings" class="choices"></div><label class="field"><span>備註（選填）</span><input id="note" maxlength="120" placeholder="例如：請分開裝"></label><div class="modal-footer"><strong id="linePrice"></strong><button class="primary">加入訂單</button></div></form></dialog>
 <script src="config.js"></script><script src="transport.js"></script><script src="app.js"></script></body></html>
+
