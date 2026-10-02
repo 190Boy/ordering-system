@@ -13,3 +13,8 @@
 #home .role-card .help{margin:0}
 @media(max-width:480px){#home .role-card{padding:16px}#home .role-options{gap:14px}}
 
+
+/* 訂單操作列：連結與按鈕使用一致的文字及置中方式。 */
+.round-actions > .secondary {display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;font-family:inherit;font-size:16px;font-weight:700;line-height:1.5;white-space:nowrap;border-radius:9px;text-align:center;}
+.round-actions > a.secondary {min-width:176px;}
+
