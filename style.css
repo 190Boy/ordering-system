@@ -18,3 +18,9 @@
 .round-actions > button, .round-actions > a {display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;font-family:inherit;font-size:16px;font-weight:700;line-height:1.5;white-space:nowrap;border-radius:9px;text-align:center;}
 .round-actions > a {min-width:176px;}
 
+
+/* 提高操作按鈕與提示訊息的辨識度。 */
+.secondary, .round-actions > a {background:#d6e3da;color:#213f34;border:1px solid #8fae9a;box-shadow:0 1px 2px #213f3412;}
+.secondary:hover:not(:disabled), .round-actions > a:hover {background:#c3d8ca;border-color:#658c75;}
+.secondary:focus-visible, .round-actions > a:focus-visible {outline:3px solid #658c75;outline-offset:3px;}
+.notice {background:#dfede3;color:#234b35;border:1px solid #a2bfa9;border-left:5px solid #3f7955;font-weight:600;}
