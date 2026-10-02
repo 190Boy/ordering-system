@@ -83,6 +83,9 @@ window.MENU_PHOTOS = {
     },
     "雲嶺金萱奶茶": {
       "url": "https://tb-static.uber.com/prod/image-proc/processed_images/fff3e53e61e4b747268d57ffa43621bc/c67fc65e9b4e16a553eb7574fba090f1.jpeg"
+    },
+    "山茶花蜜桃奶蓋": {
+      "url": "https://tb-static.uber.com/prod/image-proc/processed_images/4db62b08a56e719c1bb9a2b573865811/c67fc65e9b4e16a553eb7574fba090f1.jpeg"
     }
   }
 };
