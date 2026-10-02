@@ -24,3 +24,14 @@
 .secondary:hover:not(:disabled), .round-actions > a:hover {background:#c3d8ca;border-color:#658c75;}
 .secondary:focus-visible, .round-actions > a:focus-visible {outline:3px solid #658c75;outline-offset:3px;}
 .notice {background:#dfede3;color:#234b35;border:1px solid #a2bfa9;border-left:5px solid #3f7955;font-weight:600;}
+
+/* 商品圖片保留完整杯身。 */
+.drink {gap:12px}
+.drink > div {flex:1;min-width:0}
+.drink-photo {display:flex;align-items:center;justify-content:center;width:94px;height:112px;flex:0 0 94px;border-radius:10px;background:#f5f5f1;overflow:hidden}
+.drink-photo img {width:100%;height:100%;object-fit:contain}
+.photo-empty {font-size:12px;color:#6c7972;border:1px dashed #c7d3ca}
+.dialog-photo {padding:0 24px 14px}
+.drink-photo-large {width:100%;height:220px;flex:auto}
+@media(max-width:850px){.drink-photo{width:74px;height:94px;flex-basis:74px}}
+@media(max-width:480px){.drink-photo{width:90px;height:106px;flex-basis:90px}.drink-photo-large{width:100%;height:200px;flex:auto}}
